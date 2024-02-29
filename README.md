@@ -31,6 +31,15 @@ Il faut penser à changer quelques petite choses avant de compiler et d'envoyer 
 - `SERVER` 0 ou 1, à activer sur un ESP qui ne sert que d'intermédiaire
 - `DEFAULT_ON` 0 ou 1, définit si la lampe doit s'allumer à la mise sous tension
 
+# Console
+Il est possible d'envoyer des commandes via la console série de l'IDE. On utilise le format JSON qui est propagé au réseau.
+exemple de JSON valides à envoyer :
+- `{}` -> aucun changement, on s'en sert de ping pour avoir l'état actuel dans la réponse
+- `{"onoff": true}` -> explicite
+- `{"color": {"0":7078093, "1":56540}}` -> change la couleur principale et secondaire. Ce sont des entiers en décimal venant des codes couleurs hexa
+- `{"zone": 5, "color": ...}` -> applique les changements pour les zones 1 et 3 (c'est un bitfield - 00000101)
+- `{"effect": 3}` -> change l'effet
+
 # Pin Layout
 
 les pins physiques de la variante `MH ET LIVE ESP32Minikit` :
