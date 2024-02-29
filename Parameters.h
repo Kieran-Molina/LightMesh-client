@@ -12,7 +12,7 @@
 
 #define ZONE_BITMAP 0b00000001 // zone definition, possible values for zoning BITMAP (1-2-4-8-16-32...)
 #define SHORT 0 // short version
-#define ENABLE_SYNC 0 // use sync
+#define ENABLE_SYNC 1 // use sync
 #define ESP32 1 // ESP version (1=MH ET LIVE ESP32MiniKit / 0= WEMOS D1 mini)
 #define SERVER 0 // disable lights and tries to be root of mesh
 #define HAS_SERVER_IN_MESH 0 //tries to NOT be root if using server mode
